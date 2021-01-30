@@ -6,7 +6,7 @@ This is the official language support extension for esoteric programming languag
 
 Autocomplete and syntax highlighting for the esoteric programming language FreakC
 
-Official GitHub repository : (https://github.com/nguyenphuminh/FreakC FreakC)
+Official GitHub repository : (https://github.com/nguyenphuminh/FreakC)
 
 ## Release Notes
 
