@@ -1,0 +1,64 @@
+{
+    "name": "freakc",
+    "displayName": "FreakC",
+    "description": "Language support for the esoteric programming language FreakC",
+    "publisher": "FreakC",
+    "icon": "fclang.png",
+    "main": "./bundled/extension.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nguyenphuminh/FreakC.git"
+    },
+    "activationEvents": [
+        "onLanguage:freakc"
+    ],
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.52.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "freakc",
+            "aliases": [
+                "FreakC",
+                "fclang"
+            ],
+            "extensions": [
+                ".fclang"
+            ],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "freakc",
+            "scopeName": "source.fclang",
+            "path": "./syntaxes/freakc.tmLanguage"
+        }]
+    },
+    "scripts": {
+        "compile": "tsc ./src/extension.ts",
+        "lint": "eslint . --ext .ts,.tsx",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "@types/node": "^12.12.0",
+        "@types/vscode": "^1.34.0",
+        "@typescript-eslint/eslint-plugin": "^4.14.0",
+        "@typescript-eslint/parser": "^4.14.0",
+        "eslint": "^7.18.0",
+        "ts-loader": "^8.0.14",
+        "ts-node": "^9.1.1",
+        "typescript": "^4.1.3",
+        "vscode": "^1.1.37",
+        "webpack": "^5.18.0",
+        "webpack-cli": "^4.4.0"
+    },
+    "dependencies": {
+        "tsc": "^1.20150623.0",
+        "typescript-compiler": "^1.4.1-2",
+        "vsce": "^1.84.0"
+    }
+}
